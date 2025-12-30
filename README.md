@@ -1,7 +1,7 @@
 # ❤️ Romantic Love Website
 
 A beautiful, emotionally rich love website featuring soft illustrations and smooth animations. Perfect for expressing your love in a unique and memorable way.
-
+Personal interactive project exploring motion, storytelling and UI emotion.
 ## ✨ Features
 
 - **Soft Hand-Drawn Illustrations**: Pastel-colored SVG illustrations with a romantic aesthetic
@@ -173,3 +173,4 @@ This website template is designed to help you express your feelings in a beautif
 ---
 
 **Note**: Remember to personalize all sections before sharing with your loved one!
+
