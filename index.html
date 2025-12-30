@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating particles background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-illustration">
+            <svg class="couple-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Moon -->
+                <circle cx="320" cy="60" r="35" fill="#FFE5B4" opacity="0.9" class="moon" aria-hidden="true"/>
+                <!-- Stars -->
+                <circle cx="280" cy="40" r="2" fill="#FFF" class="star star-1" aria-hidden="true"/>
+                <circle cx="350" cy="90" r="2" fill="#FFF" class="star star-2" aria-hidden="true"/>
+                <circle cx="300" cy="100" r="1.5" fill="#FFF" class="star star-3" aria-hidden="true"/>
+                <!-- Couple silhouette -->
+                <ellipse cx="200" cy="280" rx="80" ry="15" fill="#E8D5E8" opacity="0.3" aria-hidden="true"/>
+                <path d="M 160 200 Q 160 180 175 175 Q 180 170 185 175 Q 190 180 190 200 L 190 250 Q 190 260 180 265 L 170 265 Q 160 260 160 250 Z" fill="#C9A9C9" aria-hidden="true"/>
+                <circle cx="175" cy="165" r="12" fill="#D4B5D4" aria-hidden="true"/>
+                <path d="M 210 205 Q 210 185 225 180 Q 230 175 235 180 Q 240 185 240 205 L 240 255 Q 240 265 230 270 L 220 270 Q 210 265 210 255 Z" fill="#B8A8C8" aria-hidden="true"/>
+                <circle cx="225" cy="170" r="12" fill="#C9B9D9" aria-hidden="true"/>
+                <!-- Cloud -->
+                <ellipse cx="80" cy="80" rx="30" ry="15" fill="#F0E6F6" opacity="0.6" class="cloud cloud-1" aria-hidden="true"/>
+                <ellipse cx="100" cy="75" rx="25" ry="12" fill="#F0E6F6" opacity="0.6" class="cloud cloud-1" aria-hidden="true"/>
+            </svg>
+        </div>
+        <div class="hero-content">
+            <h1 class="typewriter" id="heroText"></h1>
+            <p class="subtitle fade-in-up">Every moment with you is a beautiful memory</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>❤</span>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story" id="story">
+        <h2 class="section-title">Our Story</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-animate>
+                <div class="timeline-icon" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="45" r="15" fill="#FFB6C1"/>
+                        <path d="M 35 55 Q 50 70 65 55" stroke="#FFB6C1" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>First Meeting</h3>
+                    <p>The day our eyes met, and the world felt different. A spark that would become our forever flame.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate>
+                <div class="timeline-icon" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 50 30 L 55 45 L 70 45 L 58 55 L 63 70 L 50 60 L 37 70 L 42 55 L 30 45 L 45 45 Z" fill="#DDA0DD"/>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>First Date</h3>
+                    <p>Nervous laughter, stolen glances, and the beginning of countless beautiful memories together.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate>
+                <div class="timeline-icon" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 50 25 Q 30 40 30 55 Q 30 75 50 85 Q 70 75 70 55 Q 70 40 50 25 Z" fill="#F08080"/>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>Falling in Love</h3>
+                    <p>When I realized you weren't just someone special—you were my everything.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate>
+                <div class="timeline-icon" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke="#FFD700" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="15" fill="#FFE4B5"/>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>Today & Forever</h3>
+                    <p>Every day with you is a gift. Here's to our infinite tomorrows together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="love-letter" id="letter">
+        <div class="letter-container" data-animate>
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 10 15 Q 15 10 20 15 Q 25 20 30 15" stroke="#E8B4C8" stroke-width="1" fill="none"/>
+                        <path d="M 70 15 Q 75 10 80 15 Q 85 20 90 15" stroke="#E8B4C8" stroke-width="1" fill="none"/>
+                    </svg>
+                </div>
+                <h2>To My Dearest Love</h2>
+                <div class="letter-content" id="letterText"></div>
+                <div class="letter-signature">
+                    <p>Forever yours,</p>
+                    <p class="signature">Your Love Sachin ❤️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons I Love You -->
+    <section class="reasons" id="reasons">
+        <h2 class="section-title">Reasons I Love You</h2>
+        <div class="reasons-grid">
+            <div class="reason-card" data-animate>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="50" cy="40" r="20" fill="#FFE4E1"/>
+                    <path d="M 35 55 Q 50 75 65 55" stroke="#FFB6C1" stroke-width="3" fill="none"/>
+                </svg>
+                <h3>Your Smile</h3>
+                <p>It lights up my darkest days and makes everything feel possible</p>
+            </div>
+
+            <div class="reason-card" data-animate>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M 50 30 Q 30 45 30 60 Q 30 75 50 85 Q 70 75 70 60 Q 70 45 50 30 Z" fill="#FFB6D9"/>
+                </svg>
+                <h3>Your Heart</h3>
+                <p>So kind, so pure, so full of love for everyone around you</p>
+            </div>
+
+            <div class="reason-card" data-animate>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M 50 25 L 55 45 L 70 45 L 58 55 L 63 75 L 50 65 L 37 75 L 42 55 L 30 45 L 45 45 Z" fill="#E6B8E6"/>
+                </svg>
+                <h3>Your Dreams</h3>
+                <p>The way you chase them inspires me to be better every day</p>
+            </div>
+
+            <div class="reason-card" data-animate>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="50" cy="50" r="25" fill="none" stroke="#DDA0DD" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="15" fill="#F0E6FA"/>
+                </svg>
+                <h3>Your Presence</h3>
+                <p>Just being near you makes me feel at home, safe, and loved</p>
+            </div>
+
+            <div class="reason-card" data-animate>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M 30 50 Q 50 30 70 50 Q 50 70 30 50" fill="#FFC0CB"/>
+                </svg>
+                <h3>Your Laughter</h3>
+                <p>The most beautiful sound in the world, my favorite melody</p>
+            </div>
+
+            <div class="reason-card" data-animate>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="50" cy="50" r="20" fill="#FFE4E1"/>
+                    <circle cx="45" cy="45" r="3" fill="#FF69B4"/>
+                    <circle cx="55" cy="45" r="3" fill="#FF69B4"/>
+                    <path d="M 40 55 Q 50 60 60 55" stroke="#FF69B4" stroke-width="2" fill="none"/>
+                </svg>
+                <h3>Everything</h3>
+                <p>Every little thing about you makes me fall deeper in love</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section class="memories" id="memories">
+        <h2 class="section-title">Our Precious Moments</h2>
+        <div class="memories-grid">
+            <div class="memory-frame" data-animate>
+                <div class="polaroid">
+                    <div class="photo-placeholder">
+                        <!-- Replace 'photo1.jpg' with your actual photo path -->
+                        <img src="photo1.jpg" alt="Our first adventure together">
+                    </div>
+                    <p class="caption">Our first adventure together</p>
+                </div>
+            </div>
+
+            <div class="memory-frame" data-animate>
+                <div class="polaroid">
+                    <div class="photo-placeholder">
+                        <!-- Replace 'photo2.jpg' with your actual photo path -->
+                        <img src="photo2.jpg" alt="That perfect sunset moment">
+                    </div>
+                    <p class="caption">That perfect sunset moment</p>
+                </div>
+            </div>
+
+            <div class="memory-frame" data-animate>
+                <div class="polaroid">
+                    <div class="photo-placeholder">
+                        <!-- Replace 'photo3.jpg' with your actual photo path -->
+                        <img src="photo3.jpg" alt="Laughing until we cried">
+                    </div>
+                    <p class="caption">Laughing until we cried</p>
+                </div>
+            </div>
+
+            <div class="memory-frame" data-animate>
+                <div class="polaroid">
+                    <div class="photo-placeholder">
+                        <!-- Replace 'photo4.jpg' with your actual photo path -->
+                        <img src="photo4.jpg" alt="Just another perfect day with you">
+                    </div>
+                    <p class="caption">Just another perfect day with you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promises Section -->
+    <section class="promises" id="promises">
+        <div class="night-sky">
+            <svg class="stars-bg" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="1.5" fill="#FFF" class="twinkle twinkle-1"/>
+                <circle cx="200" cy="150" r="2" fill="#FFF" class="twinkle twinkle-2"/>
+                <circle cx="300" cy="80" r="1" fill="#FFF" class="twinkle twinkle-3"/>
+                <circle cx="450" cy="120" r="1.5" fill="#FFF" class="twinkle twinkle-1"/>
+                <circle cx="600" cy="90" r="2" fill="#FFF" class="twinkle twinkle-2"/>
+                <circle cx="750" cy="140" r="1" fill="#FFF" class="twinkle twinkle-3"/>
+                <circle cx="850" cy="110" r="1.5" fill="#FFF" class="twinkle twinkle-1"/>
+                <circle cx="150" cy="250" r="1" fill="#FFF" class="twinkle twinkle-2"/>
+                <circle cx="400" cy="280" r="1.5" fill="#FFF" class="twinkle twinkle-3"/>
+                <circle cx="700" cy="260" r="2" fill="#FFF" class="twinkle twinkle-1"/>
+            </svg>
+        </div>
+        <h2 class="section-title">My Promises to You</h2>
+        <div class="promises-container">
+            <div class="promise-card" data-animate>
+                <div class="promise-glow"></div>
+                <p>I promise to love you in every season of life</p>
+            </div>
+            <div class="promise-card" data-animate>
+                <div class="promise-glow"></div>
+                <p>I promise to be your safe place, always</p>
+            </div>
+            <div class="promise-card" data-animate>
+                <div class="promise-glow"></div>
+                <p>I promise to grow with you, not apart from you</p>
+            </div>
+            <div class="promise-card" data-animate>
+                <div class="promise-glow"></div>
+                <p>I promise to choose you, every single day</p>
+            </div>
+        </div>
+        <div class="forever-text" data-animate>
+            <h3>Forever with you ❤️</h3>
+        </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section class="surprise" id="surprise">
+        <div class="surprise-container">
+            <div class="locked-heart" id="lockedHeart" role="button" tabindex="0" aria-label="Click to unlock a special message">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M 100 60 Q 70 80 70 110 Q 70 140 100 160 Q 130 140 130 110 Q 130 80 100 60 Z" fill="#FFB6C1" opacity="0.3" stroke="#FF69B4" stroke-width="2"/>
+                    <circle cx="100" cy="110" r="15" fill="#FFE4E1"/>
+                    <rect x="97" y="115" width="6" height="20" fill="#FFE4E1"/>
+                </svg>
+                <p>Click to unlock a special message ❤️</p>
+            </div>
+            <div class="surprise-message" id="surpriseMessage">
+                <div class="message-content">
+                    <h3>You are my today and all of my tomorrows</h3>
+                    <p>Thank you for being the most incredible person in my life. Every moment with you is a treasure, and I can't wait to create a lifetime of beautiful memories together.</p>
+                    <p class="message-signature">I love you more than words can say ❤️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
