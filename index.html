@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love ❤️</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+
+    <!-- SEO & Social Sharing -->
+    <meta name="description" content="A beautiful, interactive love website filled with memories, promises, and heartfelt messages.">
+    <meta property="og:title" content="For My Love ❤️">
+    <meta property="og:description" content="A beautiful, interactive love website filled with memories, promises, and heartfelt messages.">
+    <meta property="og:type" content="website">
+    <!-- og:url: replace with your live site URL before publishing -->
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="theme-color" content="#FFB6C1">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="For My Love ❤️">
+    <meta name="twitter:description" content="A beautiful, interactive love website filled with memories, promises, and heartfelt messages.">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen" aria-live="polite" aria-label="Loading">
+        <div class="loading-heart" aria-hidden="true">❤️</div>
+        <p>Loading with love...</p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <span class="nav-logo" aria-hidden="true">❤</span>
+            <ul class="nav-links" role="list">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#letter">Letter</a></li>
+                <li><a href="#reasons">Reasons</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#promises">Promises</a></li>
+                <li><a href="#surprise">Surprise</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">🌙</button>
+                <button class="share-btn" id="shareBtn" aria-label="Share this page" title="Share this page">🔗</button>
+            </div>
+        </div>
+    </nav>
+
     <!-- Floating particles background -->
     <div class="particles" id="particles"></div>
 

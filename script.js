@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initSurprise();
     initLetterTypewriter();
     initImageLoading();
+    initLoadingScreen();
+    initScrollProgress();
+    initNav();
+    initShare();
+    initDarkMode();
 });
 
 // ━━━━━━━━━━━━━━━━ FLOATING PARTICLES ━━━━━━━━━━━━━━━━
@@ -337,5 +342,110 @@ function initImageLoading() {
             this.style.display = 'none';
             // Keep the gradient background and camera icon
         });
+    });
+}
+
+// ━━━━━━━━━━━━━━━━ LOADING SCREEN ━━━━━━━━━━━━━━━━
+const LOADING_SCREEN_DELAY_MS = 400;
+
+function initLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (!loadingScreen) return;
+
+    const hide = () => setTimeout(() => loadingScreen.classList.add('hidden'), LOADING_SCREEN_DELAY_MS);
+
+    if (document.readyState === 'complete') {
+        hide();
+    } else {
+        window.addEventListener('load', hide);
+    }
+}
+
+// ━━━━━━━━━━━━━━━━ SCROLL PROGRESS BAR ━━━━━━━━━━━━━━━━
+function initScrollProgress() {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = pct + '%';
+    }, { passive: true });
+}
+
+// ━━━━━━━━━━━━━━━━ NAVIGATION ━━━━━━━━━━━━━━━━
+function initNav() {
+    const nav = document.getElementById('siteNav');
+    if (!nav) return;
+
+    // Show nav only after scrolling past the hero section
+    const hero = document.getElementById('hero');
+    if (hero) {
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                nav.classList.toggle('visible', !entry.isIntersecting);
+            });
+        }, { threshold: 0.1 });
+        navObserver.observe(hero);
+    }
+
+    // Highlight active section link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = nav.querySelectorAll('.nav-links a');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            }
+        });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => sectionObserver.observe(s));
+}
+
+// ━━━━━━━━━━━━━━━━ SHARE BUTTON ━━━━━━━━━━━━━━━━
+function initShare() {
+    const shareBtn = document.getElementById('shareBtn');
+    if (!shareBtn) return;
+
+    shareBtn.addEventListener('click', async () => {
+        const shareData = {
+            title: 'For My Love ❤️',
+            text: 'A special message just for you 💕',
+            url: window.location.href
+        };
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                await navigator.clipboard.writeText(window.location.href);
+                shareBtn.textContent = '✅';
+                setTimeout(() => { shareBtn.textContent = '🔗'; }, 2000);
+            }
+        } catch (_) {
+            // User cancelled or clipboard not available
+        }
+    });
+}
+
+// ━━━━━━━━━━━━━━━━ DARK MODE TOGGLE ━━━━━━━━━━━━━━━━
+function initDarkMode() {
+    const toggleBtn = document.getElementById('themeToggle');
+    if (!toggleBtn) return;
+
+    const saved = localStorage.getItem('darkMode');
+    if (saved === 'true') {
+        document.body.classList.add('dark-mode');
+        toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-mode');
+        toggleBtn.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', isDark);
     });
 }
